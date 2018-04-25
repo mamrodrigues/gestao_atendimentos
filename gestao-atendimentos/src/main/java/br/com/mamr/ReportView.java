@@ -1,18 +1,23 @@
-package br.com.mamr.view;
+package br.com.mamr;
 
 import java.util.Date;
 
-import br.com.mamr.controler.ReportGenerator;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import br.com.mamr.controler.ReportResource;
 import br.com.mamr.model.Contratada;
 import br.com.mamr.model.Contratante;
 import br.com.mamr.model.Contrato;
 import br.com.mamr.model.Endereco;
 import br.com.mamr.model.TipoEndereco;
 
+@SpringBootApplication
 public class ReportView {
 
 	public static void main(String[] args) {
-		ReportGenerator reportGenerator = new ReportGenerator();
+		SpringApplication.run(ReportView.class, args);
+		ReportResource reportGenerator = new ReportResource();
 
 		ReportView reportView = new ReportView();
 		reportGenerator.generate(reportView.factoryContrato());

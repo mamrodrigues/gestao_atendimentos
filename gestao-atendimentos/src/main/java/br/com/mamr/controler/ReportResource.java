@@ -1,8 +1,16 @@
 package br.com.mamr.controler;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mamr.model.Contratada;
 import br.com.mamr.model.Contratante;
@@ -16,12 +24,15 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 
-public class ReportGenerator {
+@RestController
+@RequestMapping("/gestao")
+public class ReportResource {
 
 	private static final String JRXML = ".//jasper//report.jrxml";
 	private static final String PDF_PATH = "C://Users//marco//Desktop//";
 
-	public void generate(Contrato contrato) {
+	@RequestMapping(value = "/contrato", method = RequestMethod.POST)
+	public void generate(@RequestBody Contrato contrato) {
 		JasperReport jasperReport;
 		JasperPrint jasperPrint;
 		try {
@@ -36,6 +47,16 @@ public class ReportGenerator {
 		} catch (JRException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@RequestMapping(value = "/detalharContrato", method = RequestMethod.GET)
+	public Contrato get(@PathVariable("id") long id) {
+		return new Contrato();
+	}
+
+	@RequestMapping(value = "/listarContratos", method = RequestMethod.GET)
+	public List<Contrato> list() {
+		return new ArrayList<Contrato>();
 	}
 
 	private HashMap<String, String> paramsBuilder(Contrato contrato) {
