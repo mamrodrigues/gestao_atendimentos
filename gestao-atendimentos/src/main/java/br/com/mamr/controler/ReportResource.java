@@ -31,7 +31,7 @@ public class ReportResource {
 	private static final String JRXML = ".//jasper//report.jrxml";
 	private static final String PDF_PATH = "C://Users//marco//Desktop//";
 
-	@RequestMapping(value = "/contrato", method = RequestMethod.POST)
+	@RequestMapping(value = "/gerarContrato", method = RequestMethod.POST)
 	public void generate(@RequestBody Contrato contrato) {
 		JasperReport jasperReport;
 		JasperPrint jasperPrint;
