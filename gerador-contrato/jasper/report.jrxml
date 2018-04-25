@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="br.com.mamr.model.Contrato"/>
+	<parameter name="contratanteNome" class="java.lang.String">
+		<property name="net.sf.jasperreports.text.truncate.at.char" value=""/>
+	</parameter>
+	<parameter name="contratanteEndereco" class="java.lang.String"/>
+	<parameter name="contratanteNacionalidade" class="java.lang.String"/>
+	<parameter name="contratanteEnderecoCEP" class="java.lang.String"/>
+	<parameter name="contratanteEnderecoCidade" class="java.lang.String"/>
+	<parameter name="contratanteEnderecoEstado" class="java.lang.String"/>
+	<parameter name="contratanteRG" class="java.lang.String"/>
+	<parameter name="contratanteEstadoRG" class="java.lang.String"/>
+	<parameter name="contratanteCPF" class="java.lang.String"/>
+	<parameter name="contratanteTelefone" class="java.lang.String"/>
+	<parameter name="contratadaNome" class="java.lang.String"/>
+	<parameter name="contratadaNomeEmpresa" class="java.lang.String"/>
+	<parameter name="contratadaNacionalidade" class="java.lang.String"/>
+	<parameter name="contratadaCNPJ" class="java.lang.String"/>
+	<parameter name="contratadaTelefone" class="java.lang.String"/>
+	<parameter name="contratadaEmail" class="java.lang.String"/>
+	<parameter name="contratadaEndereco" class="java.lang.String"/>
+	<parameter name="contratadaTipoEndereco" class="java.lang.String"/>
+	<parameter name="contratadaEnderecoCEP" class="java.lang.String"/>
+	<parameter name="contratadaEnderecoNumero" class="java.lang.String"/>
+	<parameter name="contratadaEnderecoCidade" class="java.lang.String"/>
+	<parameter name="contratadaEnderecoEstado" class="java.lang.String"/>
+	<title>
+		<band height="50"/>
+	</title>
+	<pageHeader>
+		<band height="28">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="28"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TITULO DO RELATÓRIO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="112" splitType="Stretch">
+			<elementGroup>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="112"/>
+					<textElement markup="none">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[CONTRATANTE: IANNE PIMENTEL LIMA NUNES, brasileira, domiciliada na Qnm 25 conjunto E casa 34 /CEP 72215-255, Brasília/DF, portadora da cédula de identidade n° 2.616.996 /ssp DF e inscrita no CPF sob nº 038.118.861-26, Telefone (61) 98598-7312.
+CONTRATADA: ELAINE SERPA CABELO E MAQUIAGEM, na pessoa de ELAINE RODRIGUES SERPA, CNPJ: 27.324..476/000134, Qn7C Conjunto 08 Casa 14, Riacho Fundo 2, BRASÍLIA/DF, CEP:
+71.880-038, TELEFONE: (61) 98167-6499, E-mail: elaineserpa@outlook.com , tem entre si justo e contratado a prestação de serviços autônomos, mediante os termos e condições seguintes:
+]]></text>
+				</staticText>
+			</elementGroup>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="369" splitType="Stretch">
+			<textField>
+				<reportElement x="106" y="20" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteNome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="106" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTRATANTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="106" height="20"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="106" height="20"/>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="106" height="20"/>
+				<text><![CDATA[NACIONALIDADE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="60" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteEndereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="40" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteNacionalidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="80" width="119" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteEnderecoCEP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="80" width="160" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteEnderecoCidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="80" width="64" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratanteEnderecoEstado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="106" height="20"/>
+				<text><![CDATA[CEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="80" width="106" height="20"/>
+				<text><![CDATA[CIDADE/ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="113" width="106" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTRATADA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="213" width="160" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaEnderecoCidade}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="213" width="106" height="20"/>
+				<text><![CDATA[CEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="213" width="106" height="20"/>
+				<text><![CDATA[CIDADE/ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="133" width="106" height="20"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="173" width="106" height="20"/>
+				<text><![CDATA[NACIONALIDADE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="173" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaNacionalidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="213" width="64" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaEnderecoEstado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="193" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaEndereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="133" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaNome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="193" width="106" height="20"/>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="213" width="119" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaEnderecoCEP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="153" width="106" height="20"/>
+				<text><![CDATA[EMPRESA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="153" width="449" height="20"/>
+				<textFieldExpression><![CDATA[$P{contratadaNomeEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
