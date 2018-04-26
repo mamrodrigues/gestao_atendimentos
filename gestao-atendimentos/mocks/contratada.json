@@ -1,0 +1,16 @@
+{
+	"nome": "Elaine Rodrigues Serpa",
+	"nomeEmpresa": "Elaine Serpa Cabelo e Maquiagem",
+	"nacionalidade": "Brasileira",
+	"CNPJ": "27.324.476/000134",
+	"telefone": "(61) 98167-6499",
+	"email": "elaineserpa@outlook.com",
+	"endereco": {
+		"endereco": "Qn7C Conjunto 08, Riacho Fundo II",
+		"tipoEndereco": "Casa",
+		"cep": "71.880-038",
+		"numero": "14",
+		"cidade": "Brasília",
+		"estado": "DF"
+	}
+}

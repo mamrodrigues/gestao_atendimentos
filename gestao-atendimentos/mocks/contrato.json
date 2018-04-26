@@ -1,0 +1,59 @@
+{
+  "contratada": {
+    "nome": "Elaine Rodrigues Serpa",
+    "nomeEmpresa": "Elaine Serpa Cabelo e Maquiagem",
+    "nacionalidade": "Brasileira",
+    "CNPJ": "27.324.476/000134",
+    "telefone": "(61) 98167-6499",
+    "email": "elaineserpa@outlook.com",
+    "endereco": {
+      "endereco": "Qn7C Conjunto 08, Riacho Fundo II",
+      "tipoEndereco": "Casa",
+      "cep": "71.880-038",
+      "numero": "14",
+      "cidade": "Brasília",
+      "estado": "DF"
+    }
+  },
+  "contratante": {
+    "nome": "Diane Oliveira",
+    "nacionalidade": "Brasileira",
+    "rg": "3.822.839",
+    "estadoRg": "DF",
+    "CPF": "187.029.984-99",
+    "telefone": "(61) 98284-8284",
+    "email": "diane.oliveira@gmail.com",
+    "endereco": {
+      "endereco": "QS 07, Avenida das Araucárias",
+      "tipoEndereco": "Apartamento",
+      "cep": "71880-100",
+      "numero": "47",
+      "cidade": "Águas Claras",
+      "estado": "DF"
+    }
+  },
+  "endereco": {
+    "endereco": "QS 07, Avenida das Araucárias",
+    "tipoEndereco": "Apartamento",
+    "cep": "71880-100",
+    "numero": "47",
+    "cidade": "Águas Claras",
+    "estado": "DF"
+  },
+  "servicos": [
+    {
+      "tipoServico": "PRODUCAO_NOIVA_PREVIA_PREVIA_ROMANTICA",
+      "valor": "21,00"
+    },
+    {
+      "tipoServico": "PRODUCAO_INFANTIL",
+      "valor": "21,00"
+    },
+    {
+      "tipoServico": "PRODUCAO_MAE_NOIVA",
+      "valor": "21,00"
+    }
+  ],
+  "dataContrato": 1578153600000,
+  "dataHoraAgendamento": 1544112000000 
+}
