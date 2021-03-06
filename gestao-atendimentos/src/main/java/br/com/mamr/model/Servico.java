@@ -2,15 +2,15 @@ package br.com.mamr.model;
 
 public class Servico {
 
-	private TipoServico tipoServico;
+	private TipoServico tipo;
 	private String valor;
 
-	public TipoServico getTipoServico() {
-		return tipoServico;
+	public TipoServico getTipo() {
+		return tipo;
 	}
 
-	public void setTipoServico(TipoServico tipoServico) {
-		this.tipoServico = tipoServico;
+	public void setTipo(TipoServico tipo) {
+		this.tipo = tipo;
 	}
 
 	public String getValor() {

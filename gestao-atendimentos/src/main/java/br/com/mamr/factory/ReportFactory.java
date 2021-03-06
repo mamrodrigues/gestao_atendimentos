@@ -16,7 +16,9 @@ import br.com.mamr.model.Contratada;
 import br.com.mamr.model.Contratante;
 import br.com.mamr.model.Contrato;
 import br.com.mamr.model.Endereco;
+import br.com.mamr.model.Estado;
 import br.com.mamr.model.Servico;
+import br.com.mamr.model.TipoEndereco;
 import br.com.mamr.model.TipoServico;
 
 public class ReportFactory {
@@ -57,24 +59,52 @@ public class ReportFactory {
 		Paragraph contratanteP = new Paragraph();
 		contratanteP.setFont(normal);
 		contratanteP.add("CONTRATANTE: " + contratante.getNome() + ", " + contratante.getNacionalidade()
-				+ ", domiciliada em " + enderecoContratante.getEndereco() + ", " + enderecoContratante.getTipoEndereco()
+				+ ", domiciliada em " + enderecoContratante.getEndereco() + ", " + enderecoContratante.getTipoEndereco().getNome()
 				+ " " + enderecoContratante.getNumero() + ", " + enderecoContratante.getCidade() + "/ "
-				+ enderecoContratante.getEstado() + ", CEP: " + enderecoContratante.getCep()
-				+ ", portadora da cédula de identidade n° " + contratante.getRg() + "/SSP " + contratante.getEstadoRg()
+				+ enderecoContratante.getEstado().getNome() + ", CEP: " + enderecoContratante.getCep()
+				+ ", portadora da cédula de identidade n° " + contratante.getRg() + "/SSP " + contratante.getEstadoRg().getValor()
 				+ " e inscrita no CPF sob nº " + contratante.getCPF() + ", Telefone: " + contratante.getTelefone()
 				+ ", E-mail: " + contratante.getEmail() + ".\r\n");
 		document.add(contratanteP);
 
-		Contratada contratada = contrato.getContratada();
-		Endereco enderecoContratada = contratada.getEndereco();
+//		Contratada contratada = contrato.getContratada();
+		
+		Contratada contratada = new Contratada();
+		contratada.setCNPJ("312312312323");
+		contratada.setEmail("elaineserpa@outlook.com");
+		contratada.setNome("Elaine Rodrigues Serpa");
+		contratada.setNomeEmpresa("Elaine Serpa Make Up");
+		contratada.setTelefone("(61) 98167-6499");
+		contratada.setNacionalidade("Brasileira");
+		
+		Endereco enderecoContratada = new Endereco();
+		enderecoContratada.setCep("71880-038");
+		enderecoContratada.setCidade("Riacho Fundo II");
+		
+		TipoEndereco tipoEndereco = new TipoEndereco();
+		tipoEndereco.setNome("Casa");
+		tipoEndereco.setValor("CASA");
+		enderecoContratada.setTipoEndereco(tipoEndereco);
+		
+		Estado estadoContratada = new Estado();
+		estadoContratada.setNome("Brasília");
+		estadoContratada.setValor("DF");
+		enderecoContratada.setEstado(estadoContratada);
+		
+		enderecoContratada.setEndereco("QN 7C Conjunto 08");
+		enderecoContratada.setNumero("14");
+		contratada.setEndereco(enderecoContratada);
+
+		
+//		Endereco enderecoContratada = contratada.getEndereco();
 
 		Paragraph contratadaP = new Paragraph();
 		contratadaP.setSpacingBefore(5);
 		contratadaP.setFont(normal);
 		contratadaP.add("CONTRATADA: " + contratada.getNomeEmpresa() + ", na pessoa de " + contratada.getNome()
 				+ ", CNPJ: " + contratada.getCNPJ() + ", " + enderecoContratada.getEndereco() + ", "
-				+ enderecoContratada.getTipoEndereco() + " " + enderecoContratada.getNumero() + ", "
-				+ enderecoContratada.getCidade() + "/ " + enderecoContratada.getEstado() + ", CEP: "
+				+ enderecoContratada.getTipoEndereco().getNome() + " " + enderecoContratada.getNumero() + ", "
+				+ enderecoContratada.getCidade() + "/ " + enderecoContratada.getEstado().getValor() + ", CEP: "
 				+ enderecoContratada.getCep() + ", Telefone: " + contratada.getTelefone() + ", E-mail: "
 				+ contratada.getEmail()
 				+ ", tem entre si justo e contratado a prestação de serviços autônomos, mediante os termos e condições seguintes:\r\n");
@@ -98,7 +128,7 @@ public class ReportFactory {
 		servicoList.setIndentationLeft(20);
 
 		for (Servico servico : contrato.getServicos()) {
-			TipoServico tipoServico = servico.getTipoServico();
+			TipoServico tipoServico = servico.getTipo();
 
 			ListItem listItem = null;
 			switch (tipoServico) {

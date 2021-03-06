@@ -3,7 +3,7 @@ Implementation-Title: gerador-contrato
 Implementation-Version: 1.0.0-SNAPSHOT
 Built-By: marco
 Implementation-Vendor-Id: br.com.mamr
-Build-Jdk: 1.8.0_161
+Build-Jdk: 1.8.0_231
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

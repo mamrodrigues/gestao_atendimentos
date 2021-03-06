@@ -76,27 +76,27 @@ public class ReportJasper {
 	}
 
 	private void enderecoMapBuilder(HashMap<String, String> map, Endereco endereco) {
-		map.put("enderecoTipo", endereco.getTipoEndereco().toString());
+		map.put("enderecoTipo", endereco.getTipoEndereco().getNome());
 		map.put("endereco", endereco.getEndereco());
 		map.put("enderecoNumero", endereco.getNumero());
 		map.put("enderecoCEP", endereco.getCep());
 		map.put("enderecoCidade", endereco.getCidade());
-		map.put("enderecoEstado", endereco.getEstado());
+		map.put("enderecoEstado", endereco.getEstado().getNome());
 	}
 
 	private void contratanteMapBuilder(HashMap<String, String> map, Contratante contratante) {
 		map.put("contratanteNome", contratante.getNome());
 		map.put("contratanteRG", contratante.getRg());
 		map.put("contratanteNacionalidade", contratante.getNacionalidade());
-		map.put("contratanteEstadoRG", contratante.getEstadoRg());
+		map.put("contratanteEstadoRG", contratante.getEstadoRg().getNome());
 		map.put("contratanteCPF", contratante.getCPF());
 		map.put("contratanteTelefone", contratante.getTelefone());
 		map.put("contratanteEndereco", contratante.getEndereco().getEndereco());
-		map.put("contratanteEnderecoTipo", contratante.getEndereco().getTipoEndereco().toString());
+		map.put("contratanteEnderecoTipo", contratante.getEndereco().getTipoEndereco().getNome());
 		map.put("contratanteEnderecoCEP", contratante.getEndereco().getCep());
 		map.put("contratanteEnderecoNumero", contratante.getEndereco().getNumero());
 		map.put("contratanteEnderecoCidade", contratante.getEndereco().getCidade());
-		map.put("contratanteEnderecoEstado", contratante.getEndereco().getEstado());
+		map.put("contratanteEnderecoEstado", contratante.getEndereco().getEstado().getNome());
 	}
 
 	private void contratadaMapBuilder(HashMap<String, String> map, Contratada contratada) {
@@ -106,11 +106,11 @@ public class ReportJasper {
 		map.put("contratadaCNPJ", contratada.getCNPJ());
 		map.put("contratadaTelefone", contratada.getTelefone());
 		map.put("contratadaEndereco", contratada.getEndereco().getEndereco());
-		map.put("contratadaEnderecoTipo", contratada.getEndereco().getTipoEndereco().toString());
+		map.put("contratadaEnderecoTipo", contratada.getEndereco().getTipoEndereco().getNome());
 		map.put("contratadaEnderecoCEP", contratada.getEndereco().getCep());
 		map.put("contratadaEnderecoNumero", contratada.getEndereco().getNumero());
 		map.put("contratadaEnderecoCidade", contratada.getEndereco().getCidade());
-		map.put("contratadaEnderecoEstado", contratada.getEndereco().getEstado());
+		map.put("contratadaEnderecoEstado", contratada.getEndereco().getEstado().getNome());
 	}
 
 }

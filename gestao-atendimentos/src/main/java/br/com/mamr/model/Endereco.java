@@ -7,7 +7,7 @@ public class Endereco {
 	private String cep;
 	private String numero;
 	private String cidade;
-	private String estado;
+	private Estado estado;
 
 	public String getEndereco() {
 		return endereco;
@@ -41,11 +41,11 @@ public class Endereco {
 		this.cidade = cidade;
 	}
 
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 

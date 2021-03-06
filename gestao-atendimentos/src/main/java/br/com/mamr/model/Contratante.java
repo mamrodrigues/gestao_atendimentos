@@ -5,7 +5,7 @@ public class Contratante {
 	private String nome;
 	private String nacionalidade;
 	private String rg;
-	private String estadoRg;
+	private Estado estadoRg;
 	private String CPF;
 	private String telefone;
 	private String email;
@@ -43,11 +43,11 @@ public class Contratante {
 		this.rg = rg;
 	}
 
-	public String getEstadoRg() {
+	public Estado getEstadoRg() {
 		return estadoRg;
 	}
 
-	public void setEstadoRg(String estadoRg) {
+	public void setEstadoRg(Estado estadoRg) {
 		this.estadoRg = estadoRg;
 	}
 

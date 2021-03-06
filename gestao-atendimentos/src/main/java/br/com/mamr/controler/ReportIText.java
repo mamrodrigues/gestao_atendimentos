@@ -67,13 +67,15 @@ public class ReportIText {
 
 	}
 
-	public void createPDF(Contrato contrato) {
+	public File createPDF(Contrato contrato) {
 
 		String filePathPDF = ReportUtil.getFilePath(PDF_PATH, new Date(), contrato.getContratante().getNome());
 
 		try {
 			Document document = new Document();
-			PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(new File(filePathPDF)));
+			
+			File pdfFile = new File(filePathPDF);
+			PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile));
 
 			// open
 			document.open();
@@ -84,10 +86,13 @@ public class ReportIText {
 			// close
 			document.close();
 			pdfWriter.close();
-
+			
+			return pdfFile;
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 
 }
