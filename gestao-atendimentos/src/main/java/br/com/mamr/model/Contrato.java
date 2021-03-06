@@ -10,7 +10,9 @@ public class Contrato {
 	private Endereco endereco;
 	private List<Servico> servicos;
 	private Date dataContrato;
-	private Date dataHoraAgendamento;
+	private Agendamento agendamento;
+	private int valorDeslocamento;
+	private int valorTotal;
 
 	public Contratada getContratada() {
 		return contratada;
@@ -52,12 +54,28 @@ public class Contrato {
 		this.dataContrato = dataContrato;
 	}
 
-	public Date getDataHoraAgendamento() {
-		return dataHoraAgendamento;
+	public Agendamento getAgendamento() {
+		return agendamento;
 	}
 
-	public void setDataHoraAgendamento(Date dataHoraAgendamento) {
-		this.dataHoraAgendamento = dataHoraAgendamento;
+	public void setAgendamento(Agendamento agendamento) {
+		this.agendamento = agendamento;
 	}
 
+	public int getValorDeslocamento() {
+		return valorDeslocamento;
+	}
+
+	public void setValorDeslocamento(int valorDeslocamento) {
+		this.valorDeslocamento = valorDeslocamento;
+	}
+
+	public int getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(int valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	
 }

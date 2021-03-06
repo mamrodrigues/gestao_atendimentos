@@ -72,7 +72,7 @@ public class ReportJasper {
 		map.put("contratoData", sdfContrato.format(contrato.getDataContrato()));
 
 		SimpleDateFormat sdfAgendamento = new SimpleDateFormat("dd/MM/yyyy  às HH:mm");
-		map.put("contratoDataAgendamento", sdfAgendamento.format(contrato.getDataHoraAgendamento()));
+		map.put("contratoDataAgendamento", sdfAgendamento.format(contrato.getAgendamento()));
 	}
 
 	private void enderecoMapBuilder(HashMap<String, String> map, Endereco endereco) {
